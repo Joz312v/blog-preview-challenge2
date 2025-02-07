@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(47, 88%, 63%);
+    font-family: 'Figtree', sans-serif;
+    overflow: hidden;
+
+/* Gradient background */
+    background: linear-gradient(270deg, hsl(47, 88%, 63%),hsl(54, 66%, 72%),hsl(73, 7%, 40%));
+    background-size: 400% 400%;
+    animation: moveGradient 6s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.blog-card {
+    background-color: hsl(0, 0%, 100%);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid hsl(0, 0%, 7%);
+    box-shadow: 10px 10px 0px hsl(0, 0%, 7%);
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}  
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.category {
+    display: inline-block;
+    background-color: hsl(47, 88%, 63%);
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+time {
+    display: block;
+    font-weight: 500;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.text {
+    max-width: 310px;
+    font-weight: 600;
+    color: hsl(0, 0%, 42%);
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 800;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: hsl(0, 0%, 7%);
+}
+
+/*Hover styles*/
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
+.author img:hover {
+    cursor: pointer;
+}
+
+.category:hover {
+    color: hsl(0, 0%, 42%);
+    cursor: pointer;
+}
+
+.name:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    transition: 0.2s ease-in-out;
+}
+
+/*For responsive w/o @media query */
+
+h1 {
+    font-size: clamp(20px, 5vw, 24px);
+}
+
+.text {
+    font-size: clamp(14px, 3.5vw, 16px);
+}
+
+.category {
+    font-size: clamp(12px, 3vw, 14px);
+}
+
+time {
+    font-size: clamp(12px, 2.8vw, 14px);
+}
