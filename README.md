@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/Joz312v/blog-preview-challenge2.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://joz312v.github.io/blog-preview-challenge2/)
 
 ## My process
 
